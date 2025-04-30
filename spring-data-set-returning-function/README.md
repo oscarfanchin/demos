@@ -2,7 +2,7 @@
 
 ### Context
 
-This test suite demonstrates the current behavior of Spring Data JPA when handling SQL set-returning functions (SRF) in the `FROM` clause, as described in the [Hibernate ORM documentation](https://docs.jboss.org/hibernate/orm/7.0/userguide/html_single/Hibernate_User_Guide.html#hql-from-set-returning-functions). While such queries work correctly when executed directly via Hibernate (e.g., through `EntityManager`) or declared with `@NativeQuery`, they currently cause a `BeanCreationException` when used in a Spring Data JPA repository method.
+This [test suite](https://github.com/oscarfanchin/demos/tree/main/spring-data-set-returning-function)  test suite demonstrates the current behavior of Spring Data JPA when handling SQL set-returning functions (SRF) in the `FROM` clause, as described in the [Hibernate ORM documentation](https://docs.jboss.org/hibernate/orm/7.0/userguide/html_single/Hibernate_User_Guide.html#hql-from-set-returning-functions). While such queries work correctly when executed directly via Hibernate (e.g., through `EntityManager`) or declared with `@NativeQuery`, they currently cause a `BeanCreationException` when used in a Spring Data JPA repository method.
 
 This does not necessarily indicate a limitation, but rather that support for this pattern may not yet have been considered or integrated into the Spring Data JPA query parser. This document can serve as a reference for evaluating the possibility of supporting this usage in future versions.
 
