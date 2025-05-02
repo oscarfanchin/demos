@@ -34,7 +34,7 @@ class DepartmentSpringDataRepositorySimpleTest {
     
     @Test
     void testFindDepartementsNativeFunctionCall() {
-        List<DepartmentInterfaceProjection> departments = springDataRepository.findAllDepartments(LocalDate.now());
+        List<DepartmentInterfaceProjection> departments = springDataRepository.findAllDepartments(LocalDate.now(),1);
         assertNotNull(departments);
         assertFalse(departments.isEmpty(), "La lista dei dipartimenti non dovrebbe essere vuota");
         departments.forEach(dept ->

@@ -14,8 +14,20 @@ public class DepartmentFunctionContributor implements FunctionContributor {
            .namedSetReturningDescriptorBuilder("getDepartementFunction",
                "get_department_function",
                SetReturningFunctionTypeResolver.builder()
-                   .invariant("id", StandardBasicTypes.LONG)
-                   .invariant("name", StandardBasicTypes.STRING)
+                   .invariant("idFunction", StandardBasicTypes.LONG)
+                   .invariant("nameFunction", StandardBasicTypes.STRING)
+                   .build()
+           )
+           .setMinArgumentCount(2)
+           .register();
+		   
+		   
+		   contributions.getFunctionRegistry()
+           .namedSetReturningDescriptorBuilder("getDepartmentFunctionSingleParam",
+               "get_department_function_single_param",
+               SetReturningFunctionTypeResolver.builder()
+                   .invariant("idFunctionSP", StandardBasicTypes.LONG)
+                   .invariant("nameFunctionSP", StandardBasicTypes.STRING)
                    .build()
            )
            .setMinArgumentCount(1)
